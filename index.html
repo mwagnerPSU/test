@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="Description" content="IST Vercel app example">
-  <title>Vercel example</title>
+  <title>Vercel Test</title>
 
   <base href="/">
 
@@ -18,22 +18,17 @@
       font-family: sans-serif;
       background-color: #ededed;
     }
-    x-weather {
+    hax-painting {
       border: 1px solid black;
     }
   </style>
-  <title>ist-vercel-demo</title>
+  <title>HAX Painting</title>
 </head>
 
 <body>
-  <x-weather city="pittsburgh"></x-weather>
-  <x-weather city="boston"></x-weather>
-  <x-weather city="portland"></x-weather>
+  <hax-painting></hax-painting>
 
-  <textarea id="response" rows="50" cols="50"></textarea>
-  <button id="refresh">Click to refresh</button>
-  <button id="user">Add user</button>
-  <script>
+  <!-- <script>
     function updateData() {
       console.log("here");
       fetch("/api/db").then(res => res.json()).then((data) => {
@@ -56,12 +51,10 @@
         updateData();
       });
     });
-  </script>
+  </script> -->
 
-  <lrnsys-comment-list></lrnsys-comment-list>
-
-  <script type="module" src="./src/x-weather.js"></script>
-  <script type="module" defer async>
+  <script type="module" src="./src/HaxPainting.js"></script>
+  <!-- <script type="module" defer async>
     // comment list
     await import("@lrnwebcomponents/lrnsys-comment/lib/lrnsys-comment-list.js").then(() => {
       fetch(`/api/comments?op=GET`).then(res => res.json()).then((comments) => 
@@ -69,6 +62,6 @@
         document.querySelector("lrnsys-comment-list").comments = comments;
       });
     });
-  </script>
+  </script> -->
 </body>
 </html>
